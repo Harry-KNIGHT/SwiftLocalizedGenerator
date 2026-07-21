@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Documentation/Assets/SwiftLocalizedGenerator-Icon.png" alt="SwiftLocalizedGenerator translation icon" width="180">
+</p>
+
 # SwiftLocalizedGenerator
 
 [![Swift 6](https://img.shields.io/badge/Swift-6.2-orange.svg?style=flat)](https://swift.org)
