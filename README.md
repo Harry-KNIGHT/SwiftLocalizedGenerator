@@ -46,7 +46,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator.git",
-            from: "0.1.0"
+            from: "1.0.0"
         )
     ],
     targets: [

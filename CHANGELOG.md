@@ -6,6 +6,14 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-07-21
+
+### Changed
+
+- Declare the existing public plugin API stable for production adoption.
+- No functional change from `0.1.1`; this release establishes the first stable
+  semantic-versioning baseline.
+
 ## [0.1.1] - 2026-07-21
 
 ### Fixed
@@ -26,6 +34,7 @@ follow [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Incremental one-command-per-catalog generation.
 - Strict transformer tests and an end-to-end localization fixture.
 
-[Unreleased]: https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/compare/0.1.1...HEAD
+[Unreleased]: https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/compare/1.0.0...HEAD
+[1.0.0]: https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/compare/0.1.1...1.0.0
 [0.1.1]: https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/releases/tag/0.1.0
