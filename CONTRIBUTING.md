@@ -4,8 +4,8 @@ Contributions are welcome through focused, reviewable pull requests.
 
 ## Development
 
-Requirements are the same as the package: macOS, Xcode 16.3 or newer, and Swift
-6.1 or newer.
+Requirements are the same as the package: macOS, Xcode 26 or newer, and Swift
+6.2 or newer.
 
 ```sh
 git clone https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator.git

@@ -11,9 +11,9 @@ permissions:
 
 jobs:
   test:
-    runs-on: macos-15
+    runs-on: macos-26
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Show Swift version
         run: swift --version
       - name: Show Xcode and xcstringstool versions

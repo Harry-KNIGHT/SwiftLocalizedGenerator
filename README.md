@@ -1,6 +1,6 @@
 # SwiftLocalizedGenerator
 
-[![Swift 6](https://img.shields.io/badge/Swift-6.1-orange.svg?style=flat)](https://swift.org)
+[![Swift 6](https://img.shields.io/badge/Swift-6.2-orange.svg?style=flat)](https://swift.org)
 [![Platforms](https://img.shields.io/badge/platforms-iOS%2016%20%7C%20macOS%2013%20%7C%20tvOS%2016%20%7C%20watchOS%209%20%7C%20visionOS%201-lightgrey.svg?style=flat)](#requirements)
 [![CI](https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/actions/workflows/ci.yml/badge.svg)](https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -172,8 +172,9 @@ is intentional: stale call sites fail at compile time.
 
 ## Requirements
 
-- Swift 6.1 or newer
-- Xcode 16.3 or newer
+- Swift 6.2 or newer
+- Xcode 26 or newer; earlier Xcode releases do not provide the
+  `xcstringstool generate-symbols` command used by the plugin
 - macOS as the build host, because `xcstringstool` ships with Xcode
 - iOS 16, macOS 13, tvOS 16, watchOS 9, or visionOS 1 for generated
   `LocalizedStringResource` APIs
