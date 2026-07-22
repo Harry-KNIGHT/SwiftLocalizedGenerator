@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Documentation/Assets/SwiftLocalizedGenerator-Icon.png" alt="SwiftLocalizedGenerator translation icon" width="180">
+  <img src="Documentation/Assets/SwiftLocalizedGenerator-Icon.png" alt="SwiftLocalizedGenerator localization package icon" width="180">
 </p>
 
 # SwiftLocalizedGenerator
@@ -9,8 +9,10 @@
 [![CI](https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/actions/workflows/ci.yml/badge.svg)](https://github.com/Harry-KNIGHT/SwiftLocalizedGenerator/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-A tiny SwiftPM build-tool plugin that turns Apple String Catalogs into a public,
-type-safe `L10n` API at compile time.
+A SwiftPM build-tool plugin for creating shared localization modules. Attach it
+to the target that owns your Apple String Catalogs, and it generates a public,
+type-safe `L10n` API at compile time that apps and other Swift packages can
+import.
 
 ```swift
 Text(L10n.Onboarding.welcomeTitle)
@@ -24,9 +26,27 @@ format specifiers, or package-bundle lookup.
 
 ## Why
 
-String Catalogs already contain everything needed for a safe localization API.
-The missing piece is a lightweight way to make Apple's generated symbols public
-and pleasant to consume across Swift packages.
+Apple's String Catalogs already contain everything needed for a safe
+localization API, and Xcode can already generate the corresponding Swift
+symbols. Those symbols are not public, however, so a feature package cannot
+consume them just by importing the module that owns the catalogs.
+
+SwiftLocalizedGenerator fills that build-time gap. A dedicated localization
+module can own shared catalogs such as `Common.xcstrings`; the plugin publishes
+Apple's generated symbols under a public `L10n` namespace during compilation;
+and every app or feature package that depends on that localization module gets
+the same clean API:
+
+```swift
+import AppLocalization
+
+Button(L10n.Common.retry) {
+    reload()
+}
+```
+
+The generator itself remains build tooling. Consumer packages import your
+localization module, not a runtime SwiftLocalizedGenerator library.
 
 - **No runtime dependency** — only a build-tool plugin.
 - **No third-party parser** — Apple's tool remains the source of truth.
